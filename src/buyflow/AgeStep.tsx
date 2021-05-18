@@ -11,6 +11,7 @@ const AgeStep: React.FC<AgeStepProps> = (props) => {
       <div>
         Age:{" "}
         <input
+          className="form-control"
           type="number"
           onChange={({ target: { value } }) => {
             setAge(Number(value));
@@ -18,7 +19,11 @@ const AgeStep: React.FC<AgeStepProps> = (props) => {
           value={age}
         ></input>
       </div>
-      <button disabled={!age} onClick={() => props.cb("age", age)}>
+      <button
+        className="btn btn-primary"
+        disabled={!age}
+        onClick={() => props.cb("age", age)}
+      >
         Next
       </button>
     </>

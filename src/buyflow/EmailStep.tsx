@@ -11,6 +11,7 @@ const EmailStep: React.FC<EmailStepProps> = (props) => {
       <div>
         Email:{" "}
         <input
+          className="form-control"
           type="email"
           onChange={({ target: { value } }) => {
             setEmail(value);
@@ -18,7 +19,11 @@ const EmailStep: React.FC<EmailStepProps> = (props) => {
           value={email}
         ></input>
       </div>
-      <button disabled={!email} onClick={() => props.cb("email", email)}>
+      <button
+        className="btn btn-primary"
+        disabled={!email}
+        onClick={() => props.cb("email", email)}
+      >
         Next
       </button>
     </>
