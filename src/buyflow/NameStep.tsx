@@ -36,6 +36,7 @@ const NameStep: React.FC<NameStepProps> = (props) => {
       </div>
       <button
         className="btn btn-primary"
+        disabled={!nameVals.firstName || !nameVals.lastName}
         onClick={() => {
           props.cb("name", {
             firstName: nameVals.firstName,
