@@ -4,6 +4,21 @@
   height: 100vmin;
 }
 
+.App input {
+  margin: 5px 0px;
+  display: inline-block;
+  max-width: 50%;
+  margin-left: 10px;
+}
+
+.App button {
+  min-width: 100px;
+}
+
+.App button:disabled {
+  cursor: not-allowed;
+}
+
 .App-logo {
   height: 4vmin;
   pointer-events: none;
